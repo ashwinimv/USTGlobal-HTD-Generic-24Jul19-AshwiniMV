@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Website</th>
+                <th >Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let user of users;let use of address;index as i'>
+                <td>{{i+1}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.website}}</td>
+                <td colspan="4">{{user.address.street}}<br>
+                {{user.address.suite}}<br>
+                {{user.address.city}}<br>
+                {{user.address.zipcode}}</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
